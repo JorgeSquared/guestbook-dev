@@ -1,5 +1,6 @@
 <?php
 
+namespace App\EntityListener;
 
 use App\Entity\Conference;
 use Doctrine\ORM\Event\LifecycleEventArgs;
