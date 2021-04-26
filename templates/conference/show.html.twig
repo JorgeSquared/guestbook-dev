@@ -27,6 +27,7 @@
         {% if next < comments|length %}
             <a href="{{ path('conference', { slug: conference.slug, offset: next }) }}">Next</a>
         {% endif %}
+
     {% else %}
         <div>No comments have been posted yet for this conference.</div>
     {% endif %}

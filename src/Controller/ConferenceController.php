@@ -17,15 +17,15 @@ use Twig\Environment;
 
 class ConferenceController extends AbstractController
 {
-    private $twig;
-    private $entityManager;
+    private Environment $twig;
+    private EntityManagerInterface $entityManager;
 
     public function __construct(Environment $twig, EntityManagerInterface $entityManager)
     {
         $this->twig = $twig;
         $this->entityManager = $entityManager;
     }
-
+    
     #[Route('/', name: 'homepage')]
     public function index(ConferenceRepository $conferenceRepository): Response
     {
