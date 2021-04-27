@@ -50,6 +50,7 @@ class CommentCrudController extends AbstractCrudController
         yield ImageField::new('photoFilename')
             ->setBasePath('/uploads/photos')
             ->setLabel('Photo')
+            ->onlyOnIndex()
         ;
         yield TextField::new('state');
 
